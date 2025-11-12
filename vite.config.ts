@@ -1,11 +1,10 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/CoachPro/', 
-  optimizeDeps: {
-    exclude: ['lucide-react'],
+  base: '/CoachPro/', // remplace EXACTEMENT par le nom de ton repo GitHub
+  build: {
+    outDir: 'docs', // si tu déploies depuis /docs
   },
-});
+})
